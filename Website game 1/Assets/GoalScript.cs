@@ -26,9 +26,9 @@ public class GoalScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        scoreView.RPC("updateScore", RpcTarget.All);
-        PhotonNetwork.Destroy(collision.gameObject);
-        GameObject ball = PhotonNetwork.Instantiate(ballPrefab.name, Vector2.zero, Quaternion.identity);
+        //scoreView.RPC("updateScore", RpcTarget.All);
+        updateScore();
+        GameObject ball = collision.gameObject;
         ball.GetComponent<BallScript>().setMoveDirection(direction);
         
     }

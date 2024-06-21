@@ -12,6 +12,7 @@ public class BallScript : MonoBehaviour
     }
 
     public void setMoveDirection(int direction) {
+        rigid.transform.position = Vector2.zero;
         rigid.velocity = new Vector2(direction * 5, Random.Range(-5,5));
         Debug.Log("this ran");
     }
