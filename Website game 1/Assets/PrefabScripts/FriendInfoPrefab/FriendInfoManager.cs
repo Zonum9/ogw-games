@@ -16,7 +16,7 @@ public class FriendInfoManager : MonoBehaviourPunCallbacks
     [SerializeField] TMP_Text playerRoom;
     [SerializeField] Button joinRoom;
     private string friendRoom;
-
+    //
     public void UpdateInfo(List<FriendInfo> allFriends)
     {
         FriendInfo friend = allFriends.Find(f => f.UserId == friendId);
