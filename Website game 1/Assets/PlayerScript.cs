@@ -40,7 +40,20 @@ public class PlayerScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("ball")) {
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity *= 1.1f;
+            Debug.Log("collisoin");
+            Rigidbody2D ballRb = collision.gameObject.GetComponent<Rigidbody2D>();
+            Vector2 ballVelocity = ballRb.velocity;
+            float contactY = collision.GetContact(0).point.y;
+
+            float inter = (contactY- transform.position.y)/ (transform.lossyScale.y / 2);
+
+            float angle = Mathf.Deg2Rad*inter * 55;
+
+            float speed = ballVelocity.magnitude;
+            Vector2 newVelocity = new Vector2(speed * Mathf.Cos(angle), speed * Mathf.Sin(angle));
+            newVelocity.x = Mathf.Sign(ballVelocity.x) * Mathf.Abs(newVelocity.x);
+            ballRb.velocity = newVelocity*1.05f;
+
         }
     }
 }
