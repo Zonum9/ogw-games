@@ -6,6 +6,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "OGWConfig", menuName = "OGW-Core/Config")]
 public class OGWCoreConfig : ScriptableObject {
 
-    public SceneAsset OnJoinedLobbyScene;
-    public SceneAsset OnJoinedRoomScene;
+    public string OnJoinedLobbyScene;
+    public string OnJoinedRoomScene;
 }

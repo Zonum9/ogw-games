@@ -8,8 +8,8 @@ public class Config : MonoBehaviour
 {
     public static Config Instance { get; private set; }
 
-    public static string OnJoinedLobbyScene => Instance.config.OnJoinedLobbyScene.name;
-    public static string OnJoinedRoomScene => Instance.config.OnJoinedRoomScene.name;
+    public static string OnJoinedLobbyScene => Instance.config.OnJoinedLobbyScene;
+    public static string OnJoinedRoomScene => Instance.config.OnJoinedRoomScene;
 
     [SerializeField] OGWCoreConfig config;
 
