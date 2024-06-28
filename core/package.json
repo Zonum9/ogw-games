@@ -1,7 +1,0 @@
-{
-  "name": "com.sz.ogw-core",
-  "version": "0.1.0",
-  "description": "Shared stuff for OGW games",
-  "displayName": "OGW-Core",
-  "unity": "2022.3"
-}
